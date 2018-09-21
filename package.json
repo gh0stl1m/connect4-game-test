@@ -2,7 +2,10 @@
   "name": "connec4-game",
   "version": "0.1.0",
   "private": true,
+  "author": "Santiago Sanchez Taborda <santiago.sanchez.t@gmail.com>",
+  "homepage": "https://connect4-game-test.github.io/",
   "dependencies": {
+    "gh-pages": "2.0.0",
     "prop-types": "15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
@@ -13,6 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   }
 }
