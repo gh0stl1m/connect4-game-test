@@ -1,6 +1,5 @@
 // External libraries
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 
 // Styles
 import './Game.css';
@@ -10,6 +9,8 @@ import { matches } from '../../utils';
 
 // Components
 import BoardGrid from '../BoardGrid';
+import ButtonLink from '../ButtonLink';
+import ButtonGeneral from '../ButtonGeneral';
 
 class Connec4 extends Component {
   constructor(props) {
@@ -74,9 +75,24 @@ class Connec4 extends Component {
     if (!winner.win) this.makePlayerMove(boardGridId);
   }
 
+  handleReset = (e) => {
+    e.preventDefault();
+    this.setState((prevState) => {
+      return {
+        board: new Array(7).fill(new Array(6).fill(null)),
+        playerMove: 'yellow',
+        playerTurn: 'red',
+        winner: {
+          player: '',
+          win: false,
+        },
+      }
+    });
+  }
+
   // Render
   render() {
-    const { board, winner } = this.state;
+    const { board, winner, playerTurn } = this.state;
 
     // Setup board grid
     const boardGrid = [...Array(board.length)].map((value, index) => {
@@ -88,7 +104,7 @@ class Connec4 extends Component {
     });
     
     return (
-      <div>
+      <div className="container-game-players">
         <h2>Connect 4 Game</h2>
         <div className="container-board-game">
           {boardGrid}
@@ -97,11 +113,24 @@ class Connec4 extends Component {
           (winner.win)
             ? (
               <div className="container-winner">
-                <p>Player {`${winner.player}`} wins!</p>
+                <p>🏆🏆Player {`${winner.player}`} wins🏆🏆</p>
               </div>
-            ) : null
+            ) : (
+              <div className="container-winner">
+                <p>Player {`${playerTurn}`} turn</p>
+              </div>
+            )
         }
-        <Link to="/"> Back </Link>
+        <div className="container-buttons">
+          <ButtonLink
+            name="Go Back"
+            linkTo="/"
+          />
+          <ButtonGeneral
+            name="Reset Game"
+            handleClick={this.handleReset}
+          />
+        </div>
       </div>
     );
   }

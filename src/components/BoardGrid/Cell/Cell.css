@@ -1,12 +1,16 @@
 .container-board-cell {
-  border: 1px solid #448AFF;
+  border: 1px solid white;
   margin: 1px;
   min-width: 80px;
   min-height: 80px;
   padding: 5px;
 }
 
-.container-board-cell div {
+.container-board-cell:hover {
+  cursor: pointer;
+}
+
+.container-board-cell > div {
   border-radius: 50%;
   min-width: 80px;
   min-height: 80px;

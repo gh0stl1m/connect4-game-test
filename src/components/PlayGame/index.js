@@ -1,6 +1,5 @@
 // External libraries
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 // Components
 import ButtonLink from '../ButtonLink';
