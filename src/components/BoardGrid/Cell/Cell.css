@@ -1,0 +1,26 @@
+.container-board-cell {
+  border: 1px solid #448AFF;
+  margin: 1px;
+  min-width: 80px;
+  min-height: 80px;
+  padding: 5px;
+}
+
+.container-board-cell div {
+  border-radius: 50%;
+  min-width: 80px;
+  min-height: 80px;
+  position: relative;
+  top: -400px;
+  transition: transform 1s;
+}
+
+.cell-yellow {
+  background-color: #FFEB3B;
+  transform: translateY(400px);
+}
+
+.cell-red {
+  background-color: #F44336;
+  transform: translateY(400px);
+}

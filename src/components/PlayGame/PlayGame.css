@@ -1,0 +1,18 @@
+.container-game {
+  align-items: center; 
+  background: linear-gradient(to bottom, #11998e, #38ef7d); 
+  color: white;
+  display: flex;
+  font-size: 30px;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  width: 100vw;
+}
+.game-title {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: 90vh;  
+  max-width: 500px;
+  padding: 0px 30px;
+}
