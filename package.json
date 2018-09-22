@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "author": "Santiago Sanchez Taborda <santiago.sanchez.t@gmail.com>",
-  "homepage": "https://gh0stl1m.github.io/connect4-game-test/",
+  "homepage": "https://connect4-game-test.herokuapp.com/",
   "dependencies": {
     "prop-types": "15.6.2",
     "react": "^16.5.2",
