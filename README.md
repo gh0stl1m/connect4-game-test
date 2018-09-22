@@ -1,6 +1,8 @@
 # Connect4 Game
 This is an game application called connect 4. Connect 4 is a two-player connection game in which the players first choose a color and then take turns dropping one colored disc from the top into a seven-column, six-row vertically suspended grid, if you want to know more information please see this [link](https://en.wikipedia.org/wiki/Connect_Four).
 
+You can see the project working in this [link](https://connect4-game-test.herokuapp.com/)
+
 ## Game Rules
 Before starting, players decide randomly which of them will be the beginner; moves are made alternatively, one by turn.
 
